@@ -1,0 +1,108 @@
+body{background-color:#000;color:#999;font-family:"Arial","Microsoft JhengHei",Apple LiGothic Medium,sans-serif;font-size:90%;}
+.hidden,.invisible{display:none!important;visibility:hidden;}
+a{color:#999;text-decoration:none;}
+a:hover{color:#fff;text-decoration:none;}
+ol,ul{list-style:none;}
+.pointer{cursor:pointer !important;}
+
+/*=========================================================================================== 中部 */
+
+/*=照片布局*/
+#wookmark{margin:50px 0;position:relative;clear:both;}
+.tiles{list-style-type:none;position:relative;margin:0;padding:0;}
+.tiles li{display:none;background-color:#fff;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+-webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+}
+
+.tiles li.inactive{visibility:hidden;opacity:0;}
+.tiles li:hover{background-color:#333;}
+.tiles li a{color:#999;}
+.tiles li a:hover{color:#fff;}
+.tiles li p{margin:0;padding:10px 15px;width:290px;font-size:1.1em;line-height:2;overflow:hidden;text-align:justify;word-wrap:break-word;}
+.tiles li img{display:block;}
+
+.wookmark-placeholder{
+border-radius: 2px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border: 1px solid #333;
+z-index: -1;
+}
+
+/*=文章布局*/
+.post{padding-bottom:100px;text-align:center;}
+.post-content{font-size:1.1em;line-height:2;overflow:hidden;word-wrap:break-word;}
+.post-content img{max-width:100%;}
+
+/*=========================================================================================== 底部 */
+
+/*=翻页样式*/
+.page-navigator{list-style:none;margin:10em 0;padding:0;text-align:center;}
+.page-navigator li{display:inline-block;margin:0 5px;}
+.page-navigator a{display:inline-block;padding:0 15px;border-radius:2px;height:38px;line-height:38px;}
+.page-navigator a:hover{background-color:#ff8800;}
+.page-navigator .current a{background-color:#666;}
+
+/*=底部标志*/
+.logo{display:block;margin:0 auto;background:url(../img/logo.png) no-repeat;background-size:80px 200px;height:200px;width:80px;transition:all 0.2s linear 0s;opacity:0.5;}
+.logo:hover{opacity:1;}
+
+/*=尾图提示*/
+.tipso_bubble{position:absolute;text-align:center;border-radius:6px;z-index:99;padding:10px;}
+.tipso_bubble>.tipso_arrow{position:absolute;width:0;height:0;border:8px solid;}
+.tipso_bubble,.tipso_bubble>.tipso_arrow{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.tipso_bubble.top>.tipso_arrow{border-color:#000 transparent transparent;top:100%;left:50%;margin-left:-8px;}
+
+/*=脚注信息*/
+.footer{margin:0 15px;border-top:1px solid #333;}
+.footer span{float:left;width:33.33%;}
+.copyright,.theme,.powered{margin:15px auto 30px;}
+.copyright{text-align:left;}
+.theme{text-align:center;}
+.powered{text-align:right;}
+
+/*搜索样式*/
+.search{position:fixed;bottom:128px;right:32px;}
+.search img{width:36px;height:36px;}
+#search{display:block;line-height:75px;text-align:center;}
+#search input{max-width:150px;width:100%;border:none;background:#000;color:#fff;text-align:center;font-size:1.3em;}
+#search button{border:none;padding:0;width:48px;height:48px;background:transparent url(../img/search-b.png) no-repeat center center;direction:ltr;text-indent:-999em;vertical-align:middle;margin-bottom:3px;}
+#search .sr-only{border:none;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}
+.site-search{display:none;padding:30px;background:#000 !important;}
+
+/*=返回顶部*/
+#toTop {display:block;text-decoration:none;position:fixed;bottom:70px;right:30px;overflow:hidden;width:36px;height:36px;border:none;text-indent:-999px;background:url(../img/totop-b.png) no-repeat;background-size:36px 36px;cursor:pointer;z-index:9;}
+#toTop:hover {background:url(../img/totop-w.png) no-repeat;background-size:36px 36px;width:36px;height:36px;}
+@keyframes fadeIn {0%{opacity:0;}100% {opacity:100%;}}
+
+/*=========================================================================================== 移动 */
+@media(min-width:1200px){.container{max-width:100%;}}
+@media(min-width:768px){.container{max-width:100%;}}
+@media(max-width:767px){
+
+/*=照片布局*/
+.tiles li:hover{background-color:#fff;}
+.tiles li a:hover{color:#000;}
+
+}
+
+@media(max-width:600px){
+
+/*=返回顶部*/
+#toTop{bottom:180px;right:25px;}
+.search{bottom:230px;right:25px;}
+
+/*=脚注信息*/
+.footer span{width:100%;}
+.copyright,.theme,.powered{text-align:center;}
+.copyright,.theme{margin:30px auto 0;}
+.powered{margin:30px auto;}
+
+}
